@@ -1,6 +1,6 @@
 C_COMPILER=gcc
 MAIN_FILE=main.c
-FILE_TO_TEST=LedDriverTest.c
+FILE_TO_TEST=unity/LedDriver/LedDriverTest.c
 UNITY_PATH_AND_FILE=unity/src/unity.c
 all:
 	${C_COMPILER} ${MAIN_FILE} -o main.exe

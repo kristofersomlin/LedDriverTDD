@@ -1,15 +1,15 @@
-#include "..\extras\fixture\src\unity_fixture.h"
-TEST_GROUP(LedDriver);
-
-TEST_SETUP(LedDriver)
-{
+#include "unity/src/unity.h"
+void TEST_LEDS() {
 
 }
-TEST_TEAR_DOWN(LedDriver)
-{
 
+int main(void) {
+  UNITY_BEGIN();
+  RUN_TEST(TEST_LEDS);
+
+  return UNITY_END();
 }
-TEST(LedDriver, LedsOffAfterCreate)
-{
-  TEST_FAIL_MESSAGE("Start here");
-}
+
+
+
+ok

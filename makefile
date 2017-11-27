@@ -5,4 +5,4 @@ UNITY_PATH_AND_FILE=unity/src/unity.c
 all:
 	${C_COMPILER} ${MAIN_FILE} -o main.exe
 test:
-	${C_COMPILER} ${MAIN_FILE} ${TEST_FILE} ${FILE_TO_TEST} ${UNITY_PATH_AND_FILE} -I \unity\extras\fixture\src -o test.exe
+	${C_COMPILER} ${FILE_TO_TEST} ${UNITY_PATH_AND_FILE} -o test.exe

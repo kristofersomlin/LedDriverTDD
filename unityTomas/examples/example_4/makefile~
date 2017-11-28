@@ -1,0 +1,14 @@
+C_COMPILER=gcc
+
+UNITY_ROOT=../..
+
+program: 
+	$(C_COMPILER) -o program main2_refactored.c main2_functions.c
+
+test: 
+	$(C_COMPILER) -o test main2_functions.c $(UNITY_ROOT)/src/unity.c test_main2_functions.c
+
+
+
+
+

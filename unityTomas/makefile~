@@ -1,0 +1,10 @@
+
+UNITY_ROOT=.
+
+SRC_FILES1=\
+  $(UNITY_ROOT)/src/unity.c \
+  $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
+	LedDriverTest.c
+
+default:
+	gcc $(SRC_FILES1) -o kalle

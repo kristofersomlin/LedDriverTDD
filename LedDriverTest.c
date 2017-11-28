@@ -1,42 +1,31 @@
 #include "unity/src/unity.h"
 uint16_t virtual_bit = 0xffff;
-void TURN_OFF_LED(int LedNR)
-{
-  if(LedNR >= 0 && LedNR < 16)
-  {
+void TURN_OFF_LED(int LedNR){
+  if(LedNR >= 0 && LedNR < 16)  {
     virtual_bit &= ~(1<<LedNR);
   }
 }
 
-void TURN_ON_LED(int LedNR)
-{
-  if(LedNR >= 0 && LedNR < 16)
-  {
+void TURN_ON_LED(int LedNR){
+  if(LedNR >= 0 && LedNR < 16)  {
     virtual_bit |= (1<<LedNR);
   }
 }
 
-void CHANGE_ALL_LEDS(int on)
-{
+void CHANGE_ALL_LEDS(int on){
   int i=0;
-  for (;i<16;i++)
-  {
-    if(on)
-    {
+  for (;i<16;i++)  {
+    if(on) {
       TURN_ON_LED(i);
-    }
-    else
-    {
+    } else {
       TURN_OFF_LED(i);
     }
   }
 }
 
-void PRINT_LED_VALUES(uint16_t num)
-{
+void PRINT_LED_VALUES(uint16_t num){
   int bit=0;
-  for(;bit<(sizeof(unsigned int) * 8); bit++)
-  {
+  for(;bit<(sizeof(unsigned int) * 8); bit++)  {
     printf("%i ", num & 0x01);
     num = num >> 1;
   }
